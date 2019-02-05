@@ -30,10 +30,11 @@ public class CardTrick {
         userValue = Integer.parseInt(JOptionPane.showInputDialog(null, "What is your card value?"));
         userSuit = JOptionPane.showInputDialog(null, "What is your suit?");
         // and search magicHand here
-        for (int i=0; i<magicHand.length; i++){
-            if (userValue == magicHand[i].getValue() && userSuit.equals(magicHand[i].getSuit()))
-            System.out.println("You guessed the magic card!\nMagicCard: "+magicHand[i].getValue()+" of "+magicHand[i].getSuit());
-            break;
+        for (int i = 0; i < magicHand.length; i++) {
+	if ((userValue == magicHand[i].getValue()) && (userSuit.equalsIgnoreCase(magicHand[i].getSuit()))) {
+            match = true;
+	} else
+            match = false;
         }
         //Then report the result here
     }    
