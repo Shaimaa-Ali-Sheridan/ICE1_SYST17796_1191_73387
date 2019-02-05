@@ -17,10 +17,9 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
-        int userValue = 0;
         boolean match = false;
-        String userSuit = "";
         Card[] magicHand = new Card[7];
+	Card luckyCard = new Card();
         
         for (int i = 0; i < magicHand.length; i++) {
 	magicHand[i] = new Card();
@@ -28,18 +27,18 @@ public class CardTrick {
 	magicHand[i].setSuit(Card.SUITS[(int) ((Math.random() * 3) + 1)]);
         }
         //insert code to ask the user for Card value and suit, create their card
-        userValue = Integer.parseInt(JOptionPane.showInputDialog(null, "What is your card value?"));
-        userSuit = JOptionPane.showInputDialog(null, "What is your suit?");
+	luckyCard.setValue(Integer.parseInt(JOptionPane.showInputDialog(null, "What is your card value? 0 - 13")));
+	luckyCard.setSuit(JOptionPane.showInputDialog(null, "What is your suit? Diamonds | Spades | Hearts | Clubs"));
         // and search magicHand here
         for (int i = 0; i < magicHand.length; i++) {
-	if ((userValue == magicHand[i].getValue()) && (userSuit.equalsIgnoreCase(magicHand[i].getSuit()))) {
-            match = true;
+	if ((luckyCard.getValue() == magicHand[i].getValue()) && (luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit()))) {
+		match = true;
 	} else
-            match = false;
-        }
+		match = false;
+	}
         //Then report the result here
         if (match)
-        System.out.println("You guess the magic card!\nCard Value: " + userValue + " of " + userSuit);
+        System.out.println(luckyCard.getValue() + " " + luckyCard.getSuit());
         else
 	System.out.println("Unlucky!");
         
@@ -49,6 +48,6 @@ public class CardTrick {
             System.out.println(magicHand[i].getValue());
             System.out.println(magicHand[i].getSuit());
         }
-        System.out.println(userValue + "\n" + userSuit);
+        System.out.println(luckyCard.getValue() + "\n" + luckyCard.getSuit());
     }    
 }
