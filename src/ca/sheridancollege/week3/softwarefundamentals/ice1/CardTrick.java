@@ -11,6 +11,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
  */
+// make some changes to cardTricc class
 public class CardTrick {
     
     public static void main(String[] args)
