@@ -18,20 +18,23 @@ public class CardTrick {
     public static void main(String[] args)
     {
         int userValue = 0;
-        String userSuite = "";
+        String userSuit = "";
         Card[] magicHand = new Card[7];
         
-        for (int i=0; i<magicHand.length; i++)
-        {
-            Card c = new Card();
-            c.setValue(Math.floor(Math.random() * 13) + 1)
-            c.setSuit(Card.SUITS[Math.floor(Math.random() * 3) + 1])
+        for (int i = 0; i < magicHand.length; i++) {
+	magicHand[i] = new Card();
+	magicHand[i].setValue((int) (Math.random() * 13) + 1);
+	magicHand[i].setSuit(Card.SUITS[(int) ((Math.random() * 3) + 1)]);
         }
         //insert code to ask the user for Card value and suit, create their card
         userValue = Integer.parseInt(JOptionPane.showInputDialog(null, "What is your card value?"));
-        userSuite = JOptionPane.showInputDialog(null, "What is your suite?");
+        userSuit = JOptionPane.showInputDialog(null, "What is your suit?");
         // and search magicHand here
+        for (int i=0; i<magicHand.length; i++){
+            if (userValue == magicHand[i].getValue() && userSuit.equals(magicHand[i].getSuit()))
+            System.out.println("You guessed the magic card!\nMagicCard: "+magicHand[i].getValue()+" of "+magicHand[i].getSuit());
+            break;
+        }
         //Then report the result here
-    }
-    
+    }    
 }
