@@ -38,5 +38,9 @@ public class CardTrick {
             match = false;
         }
         //Then report the result here
+        if (match)
+        System.out.println("You guess the magic card!\nCard Value: " + userValue + " of " + userSuit);
+        else
+	System.out.println("Unlucky!");
     }    
 }
