@@ -4,8 +4,6 @@
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
-import java.util.Scanner;
-
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
@@ -17,10 +15,11 @@ public class CardTrick {
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
-        Card userCard = new Card();
+        Card luckyCard = new Card();
         boolean matching = false;
         
-        Scanner input = new Scanner(System.in);
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Diamonds");
         
         //generating cards for magic hand and filling hand
         for (int i=0; i<magicHand.length; i++)
@@ -33,19 +32,12 @@ public class CardTrick {
             //System.out.println(magicHand[i].getValue() + " " + magicHand[i].getSuit());
         }
         
-        //asking user for card value and suit
-        System.out.print("Please enter your card value (1-13): ");
-        userCard.setValue(input.nextInt());
-        System.out.println("Choose your suit (Hearts, Diamonds, Spades, Clubs)");
-        userCard.setSuit(input.next());
-        System.out.println(userCard.getValue() + " " + userCard.getSuit());
-        
         //comparing users pick to magic hand
         for(int i = 0 ; i < magicHand.length; i++)
         {
         
             //if the user and card in magic hand match, make matching true
-            if(userCard.getValue() == magicHand[i].getValue() && userCard.getSuit().equals(magicHand[i].getSuit()))
+            if(luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equals(magicHand[i].getSuit()))
             {
             
                 matching = true;
@@ -54,7 +46,7 @@ public class CardTrick {
         
         }
 
-        //display if users guess was correct or not
+        //display if the lucky card was in the hand
         if(matching == true)
             System.out.println("You made a good guess!");
         else
