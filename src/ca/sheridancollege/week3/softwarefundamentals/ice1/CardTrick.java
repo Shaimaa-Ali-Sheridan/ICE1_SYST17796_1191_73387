@@ -34,8 +34,8 @@ public class CardTrick {
         }
         
         Card LuckyCard = new Card();
-        LuckyCard.setValue(3);
-        LuckyCard.setSuit(Card.SUITS[0]);
+        LuckyCard.setValue(5);
+        LuckyCard.setSuit(Card.SUITS[1]);
 
         
         Scanner Input = new Scanner(System.in);
@@ -55,7 +55,7 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             
-            if(magicHand[i].getSuit().equals(c.getSuit()) && magicHand[i].getValue() == c.getValue()){
+            if(magicHand[i].getSuit().equals(LuckyCard.getSuit()) && magicHand[i].getValue() == LuckyCard.getValue()){
                 System.out.println("FOUND YOU WON !!! ");
                 flag = false;
                 break;
