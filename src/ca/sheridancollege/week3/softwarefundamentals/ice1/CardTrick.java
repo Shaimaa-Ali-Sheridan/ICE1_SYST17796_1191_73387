@@ -38,21 +38,27 @@ public class CardTrick {
         }
         
         Scanner input = new Scanner(System.in);
+        Scanner input2 = new Scanner(System.in);
         System.out.println("Choose Card NUmber: ");
         int cardx = input.nextInt();
-        System.out.println("Choose Suite NUmber: ");
-        int suitex = input.nextInt();
+        System.out.println("Choose Suite Name: ");
+        String suitex = input2.nextLine();
         
+        int flag=0;
         for (int i=0; i<magicHand.length; i++)
         {
-            /*if(cardx == magicHand[i].getValue() && suitex == magicHand[i].getSuit()){
-                System.out.println("WON");
+            if(cardx == magicHand[i].getValue() && suitex.equals(magicHand[i].getSuit())){
+                flag=1;
+                break;
             }
-            else
-                System.out.println("LOSE");*/
             
             
         }
+        
+        if(flag==1)
+            System.out.println("WON");
+        else
+            System.out.println("Lose");
         
         
         //insert code to ask the user for Card value and suit, create their card
