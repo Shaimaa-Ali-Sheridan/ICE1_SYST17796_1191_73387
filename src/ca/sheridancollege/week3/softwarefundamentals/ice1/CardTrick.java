@@ -38,9 +38,38 @@ public class CardTrick {
         }
        
         //insert code to ask the user for Card value and suit, create their card
+        
+        System.out.println("Choose your card number");
+        num = input.nextInt();
+        System.out.println("Choose your suit");
+        type = input.next();
+
         // and search magicHand here
+        
+        for(int i=0; i<magicHand.length; i++)
+       {
+           if(magicHand[i].getValue() == num && magicHand[i].getSuit() == type)
+           {
+               result = true;
+               break;
+           }
+           else
+           {
+               result = false;
+           }
+       }
+
         //Then report the result here
        
+        if(result == true)
+       {
+           System.out.println("You win");
+       }
+       else
+       {
+           System.out.println("You loose");
+       }
+
     }
     
 }
