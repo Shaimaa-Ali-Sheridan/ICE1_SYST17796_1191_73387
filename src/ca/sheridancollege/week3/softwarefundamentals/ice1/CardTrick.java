@@ -18,6 +18,7 @@ public class CardTrick {
     public static void main(String[] args)
     {
         int userValue = 0;
+        boolean match = false;
         String userSuit = "";
         Card[] magicHand = new Card[7];
         
