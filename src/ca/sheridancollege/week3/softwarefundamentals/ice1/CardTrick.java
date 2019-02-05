@@ -20,6 +20,10 @@ public class CardTrick {
         Scanner input = new Scanner(System.in);
         Card[] magicHand = new Card[7];
         
+        Card luckyCard = new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Spades");
+        
         for (int i = 0; i< magicHand.length; i++)
         {
             Card c = new Card();
@@ -44,10 +48,15 @@ public class CardTrick {
          // and search magicHand here
          
         for(int i = 0; i < magicHand.length; i++){           
-            if(userCard.getValue() == magicHand[i].getValue() && userCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
+           /* if(userCard.getValue() == magicHand[i].getValue() && userCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
                 //Then report the result here
                System.out.println("Card Match");
-            }        
+            }*/ 
+            if(luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
+                //Then report the result here
+               System.out.println("Card Match");
+            }
+            
         }
         System.out.println("No Match");       
     }
