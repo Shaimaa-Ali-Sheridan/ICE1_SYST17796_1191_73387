@@ -12,6 +12,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * @author dancye
  */
 // make some changes to cardTricc class
+// to make it work properly
 public class CardTrick {
     
     public static void main(String[] args)
