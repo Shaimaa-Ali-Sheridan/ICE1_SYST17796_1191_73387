@@ -42,5 +42,13 @@ public class CardTrick {
         System.out.println("You guess the magic card!\nCard Value: " + userValue + " of " + userSuit);
         else
 	System.out.println("Unlucky!");
+        
+        //Displaying randomly generated cards and the card user picked
+        for (int i = 0; i < magicHand.length; i++) {
+            System.out.println(i);
+            System.out.println(magicHand[i].getValue());
+            System.out.println(magicHand[i].getSuit());
+        }
+        System.out.println(userValue + "\n" + userSuit);
     }    
 }
