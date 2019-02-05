@@ -32,11 +32,11 @@ public class CardTrick {
             //System.out.println(magicHand[i].getValue() + " " + magicHand[i].getSuit());
         }
         
-        //comparing users pick to magic hand
+        //comparing lucky card pick to magic hand
         for(int i = 0 ; i < magicHand.length; i++)
         {
         
-            //if the user and card in magic hand match, make matching true
+            //if the lucky card and card in magic hand match, make matching true
             if(luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equals(magicHand[i].getSuit()))
             {
             
