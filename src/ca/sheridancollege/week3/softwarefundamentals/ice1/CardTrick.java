@@ -32,6 +32,12 @@ public class CardTrick {
             c.setSuit(Card.SUITS[randomNum1]);
             magicHand[i] = c;
         }
+        
+        Card LuckyCard = new Card();
+        LuckyCard.setValue(3);
+        LuckyCard.setSuit(Card.SUITS[0]);
+
+        
         Scanner Input = new Scanner(System.in);
         System.out.print("Please chose the Card Suit : 0 = Hearts, 1 = Diamonds, 2 = Spades , 3 = Clubs : ");
         
