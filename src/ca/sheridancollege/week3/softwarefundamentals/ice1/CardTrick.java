@@ -25,6 +25,7 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
+            // new object luckycard 
             LuckyCard lc = new LuckyCard();
             lc.setValue((int) (Math.floor(Math.random()*7)+1));
             lc.setSuit(Card.SUITS((int) (Math.floor(Math.random()*3)+1)));
