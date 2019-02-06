@@ -27,6 +27,11 @@ public class CardTrick {
         String type;
         boolean result = false;
         
+        //adding luckyCard
+        Card luckyCard = new Card();
+        luckyCard.setValue(13);
+        luckyCard.setSuit(0);
+        
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
