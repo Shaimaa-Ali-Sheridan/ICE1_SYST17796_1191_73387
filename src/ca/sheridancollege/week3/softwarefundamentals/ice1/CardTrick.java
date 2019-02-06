@@ -19,6 +19,7 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         Card[] SUITS = new Card[3]; 
+        LuckyCard[] Suit = new LuckyCard[4];
         Scanner in = new Scanner(System.in);
         
         for (int i=0; i<magicHand.length; i++)
