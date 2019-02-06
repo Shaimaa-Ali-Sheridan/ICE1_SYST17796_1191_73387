@@ -19,14 +19,15 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         Card[] SUITS = new Card[3]; 
-        LuckyCard[] Suit = new LuckyCard[4];
+       
         Scanner in = new Scanner(System.in);
         
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            c.setValue((int) (Math.floor(Math.random()*7)+1));
-            c.setSuit(Card.SUITS((int) (Math.floor(Math.random()*3)+1)));
+            LuckyCard lc = new LuckyCard();
+            lc.setValue((int) (Math.floor(Math.random()*7)+1));
+            lc.setSuit(Card.SUITS((int) (Math.floor(Math.random()*3)+1)));
         }
         
         System.out.println("Pick a card");
