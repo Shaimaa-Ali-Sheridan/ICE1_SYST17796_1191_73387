@@ -38,6 +38,7 @@ public class CardTrick {
             c.setSuit(Card.SUITS[Num1]);
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             magicHand[i]=c;
+          
             
         }
         System.out.println("enter a card number which u like");
@@ -45,6 +46,10 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         System.out.println("Enter a suite value");
         num1=input.nextInt();
+       Card Luky Card=new Card();
+        Lucky Card.setSuit(2);
+        Lucky Card.setValue(10);
+       
         
         
                    
