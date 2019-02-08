@@ -12,7 +12,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * @author dancye
  */
 public class CardTrick {
-    
+    //master branch
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
@@ -21,7 +21,9 @@ public class CardTrick {
         {
             Card c = new Card();
             //c.setValue(insert call to random number generator here)
+            c.setValue((int)(Math.random() * 13 )+1);
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setSuit(Card.SUIT((int)(Math.random() * 3 )+1));
         }
         
         //insert code to ask the user for Card value and suit, create their card
