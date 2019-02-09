@@ -21,10 +21,10 @@ public class CardTrick {
 			magicHand[i].setValue((int) (Math.random() * 13) + 1);
 			magicHand[i].setSuit(Card.SUITS[(int) ((Math.random() * 3) + 1)]);
 		}
-		// insert code to ask the user for Card value and suit, create their card
+                // Ask the user for Card value and suit, create their card
 		luckyCard.setValue(Integer.parseInt(JOptionPane.showInputDialog(null, "What is your card value? 0 - 13")));
 		luckyCard.setSuit(JOptionPane.showInputDialog(null, "What is your suit? Diamonds | Spades | Hearts | Clubs"));
-		// and search magicHand here
+		// Search magicHand
 		for (int i = 0; i < magicHand.length; i++) {
 			if ((luckyCard.getValue() == magicHand[i].getValue())
 					&& (luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit()))) {
@@ -34,17 +34,17 @@ public class CardTrick {
 				match = false;
 		}
 		System.out.println(match);
-		// Then report the result here
+		// Report the result, print corresponding message
 		if (match == true)
 			System.out.println("Lucky!\nYour card was " + luckyCard.getValue() + " of " + luckyCard.getSuit());
 		else
 			System.out.println("Unlucky!\nYour card was " + luckyCard.getValue() + " of " + luckyCard.getSuit());
-		// print cards in magicHand
+		// Print 7 random cards in magicHand
 		printDeck(magicHand);
 	}
 
 	static void printDeck(Card[] magicHand) {
-//		 Displaying randomly generated cards and the card user picked
+                // Displaying randomly generated cards and the card user picked
 		for (int i = 0; i < magicHand.length; i++) {
 			System.out.println("Card #" + (i + 1));
 			System.out.println(magicHand[i].getValue() + " of " + magicHand[i].getSuit());
