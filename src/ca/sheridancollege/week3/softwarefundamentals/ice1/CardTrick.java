@@ -11,14 +11,14 @@ import java.util.Scanner;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author Zain Razvi 
  * @Student# 991517290
- * @date: February 5, 2019
+ * @date: February 10, 2019
  */
 public class CardTrick {
     
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
-        
+        boolean d = false; //This variable is used return true or false if the values match
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
