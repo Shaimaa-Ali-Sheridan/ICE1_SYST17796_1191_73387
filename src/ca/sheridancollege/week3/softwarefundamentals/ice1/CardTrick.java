@@ -38,16 +38,26 @@ public class CardTrick {
         {
             if(card == magicHand[i].getValue() && suit.equals(magicHand[i].getSuit()))
             {
-                System.out.println("The card values and suit matches");
+                d = true;
+                System.out.println("The card values and suit are in the magic hand");
             }
             else
             {
-                System.out.println("The card values and suit matches");
+                d = false;
+                System.out.println("The card values and suit are not in the magic hand");
             }
         }
+        System.out.println(d); 
         
         //Then report the result here
-        
+        if(d == true)
+        {
+            System.out.println("The card values and suit are in the magic hand");
+        }
+        else
+        {
+            System.out.println("The card values and suit are not in the magic hand");
+        }
     }
     
 }
