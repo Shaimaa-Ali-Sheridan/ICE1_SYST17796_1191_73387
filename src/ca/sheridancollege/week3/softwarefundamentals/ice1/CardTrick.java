@@ -9,8 +9,8 @@ import java.util.Scanner;
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
- * @author dancye
- * @author: Zain Razvi 
+ * @author Zain Razvi 
+ * @Student# 991517290
  * @date: February 5, 2019
  */
 public class CardTrick {
@@ -22,8 +22,8 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            c.setValue(Math.random() * 13 + 1);
-            c.setSuit(Card.SUITS[Math.random() * 4]);
+            c.setValue((int)(Math.random() * 13 + 1));
+            c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
         }
         
         //insert code to ask the user for Card value and suit, create their card
@@ -34,9 +34,20 @@ public class CardTrick {
         String suit = input.nextLine();
         
         // and search magicHand here
-        
+        for (int i=0; i<magicHand.length; i++)
+        {
+            if(card == magicHand[i].getValue() && suit.equals(magicHand[i].getSuit()))
+            {
+                System.out.println("The card values and suit matches");
+            }
+            else
+            {
+                System.out.println("The card values and suit matches");
+            }
+        }
         
         //Then report the result here
+        
     }
     
 }
