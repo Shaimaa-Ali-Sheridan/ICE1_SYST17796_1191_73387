@@ -19,11 +19,12 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         boolean d = false; //This variable is used return true or false if the values match
+        Card luckyCard = new Card()
         for (int i=0; i<magicHand.length; i++)
         {
-            Card c = new Card();
-            c.setValue((int)(Math.random() * 13 + 1));
-            c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
+            magicHand[i] = new Card();
+            magicHand[i].setValue((int)(Math.random() * 13 + 1));
+            magicHand[i].setSuit(Card.SUITS[(int)(Math.random() * 4)]);
         }
         
         //insert code to ask the user for Card value and suit, create their card
@@ -32,19 +33,20 @@ public class CardTrick {
         int card = input.nextInt();
         System.out.println("What is your suit?");
         String suit = input.nextLine();
-        
+        luckyCard.setValue(card);
+        luckyCard.setSuit(suit);
         // and search magicHand here
         for (int i=0; i<magicHand.length; i++)
         {
-            if(card == magicHand[i].getValue() && suit.equals(magicHand[i].getSuit()))
+            if(luckyCardgetValue == magicHand[i].getValue() && luckyCardgetSuit.equals(magicHand[i].getSuit()))
             {
                 d = true;
-                System.out.println("The card values and suit are in the magic hand");
+                //System.out.println("The card values and suit are in the magic hand");
             }
             else
             {
                 d = false;
-                System.out.println("The card values and suit are not in the magic hand");
+                //System.out.println("The card values and suit are not in the magic hand");
             }
         }
         System.out.println(d); 
@@ -52,11 +54,11 @@ public class CardTrick {
         //Then report the result here
         if(d == true)
         {
-            System.out.println("The card values and suit are in the magic hand");
+            System.out.println("Your card value " + luckyCard.getValue() + " and suit " + luckyCard.getSuit() + "are in the magic hand");
         }
         else
         {
-            System.out.println("The card values and suit are not in the magic hand");
+            System.out.println("Your card values and suit are not in the magic hand");
         }
     }
     
