@@ -13,13 +13,13 @@ import java.util.Scanner;
  * @Student# 991517290
  * @date: February 10, 2019
  */
-public class CardTrick {
-    
+public class CardTrick 
+{    
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
         boolean d = false; //This variable is used return true or false if the values match
-        Card luckyCard = new Card()
+        Card luckyCard = new Card();
         for (int i=0; i<magicHand.length; i++)
         {
             magicHand[i] = new Card();
@@ -31,14 +31,15 @@ public class CardTrick {
         Scanner input = new Scanner(System.in);
         System.out.println("What is your card value?");
         int card = input.nextInt();
+        luckyCard.setValue(card);
+        
         System.out.println("What is your suit?");
         String suit = input.nextLine();
-        luckyCard.setValue(card);
         luckyCard.setSuit(suit);
         // and search magicHand here
         for (int i=0; i<magicHand.length; i++)
         {
-            if(luckyCardgetValue == magicHand[i].getValue() && luckyCardgetSuit.equals(magicHand[i].getSuit()))
+            if((luckyCard.getValue() == magicHand[i].getValue()) && (luckyCard.getSuit().equals(magicHand[i].getSuit())))
             {
                 d = true;
                 //System.out.println("The card values and suit are in the magic hand");
@@ -48,8 +49,7 @@ public class CardTrick {
                 d = false;
                 //System.out.println("The card values and suit are not in the magic hand");
             }
-        }
-        System.out.println(d); 
+        } 
         
         //Then report the result here
         if(d == true)
@@ -61,5 +61,4 @@ public class CardTrick {
             System.out.println("Your card values and suit are not in the magic hand");
         }
     }
-    
 }
