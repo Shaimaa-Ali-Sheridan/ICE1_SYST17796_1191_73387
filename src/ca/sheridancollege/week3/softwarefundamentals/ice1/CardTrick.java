@@ -25,8 +25,8 @@ public class CardTrick {
             c.setSuit(Card.SUITS[randomNum1]);
             magicHand[i] = c;
         }
-      
-         Card Lucky = new Card();
+     
+        Card Lucky = new Card();
         Lucky.setValue(5);
         Lucky.setSuit(Card.SUITS[1]);
 
@@ -36,7 +36,7 @@ public class CardTrick {
         
         int suitnumber = Input.nextInt();
         
-        System.out.print("Please Enter card number here : ");
+        System.out.print("Please Enter a card number here : ");
         
         int cardnumber = Input.nextInt();
         
