@@ -15,7 +15,9 @@ import java.util.Scanner;
  * Date - 11th Feb,2019
  */
 public class CardTrick {
-
+   int a[]=new int[7];
+   int card;
+   char type,random_type;
     public static void main(String[] args)
     {
         Random r = new Random();
@@ -59,7 +61,76 @@ public class CardTrick {
                 System.out.println(" match :) ");
            else
                 System.out.println("no match :(");
-
+              char ch = suit.charAt(0);
+              CardTrick1 luckyCard= new CardTrick1(card,ch);
+              luckyCard.result();
     }
+        void CardTrick1(int x, char ch)
+	 	{
+	 		card=x;
+	 		System.out.println("CARD PICKED: "+card);
+
+	 		type=ch;
+	 		Random rand = new Random();
+	 		for(int i=0;i<a.length;i++)
+	 		{
+	 			a[i]=rand.nextInt(14);// generate random no inbetween 0 to 13
+	 			if(a[i]==0)
+	 		 	{
+	 				a[i]=rand.nextInt(14);
+	 			}
+	 		}
+	 		for(int j=0;j<7;j++)
+	 		{
+	 			System.out.print("	:"+a[j]);
+	 		}
+
+
+	 		int s=rand.nextInt(5);//0='C' 1='D' 2='H' 3='S'
+	 		switch(s)
+	 		{
+	 			case 0:
+	 				random_type='C';
+	 				System.out.println("\n\n random_type: "+random_type);
+	 				return;
+	 			case 1:
+	 				random_type='D';
+	 				System.out.println("\n\n random_type: "+random_type);
+	 				return;
+	 			case 2:
+	 				random_type='H';
+	 				System.out.println("\n\n random_type: "+random_type);
+	 				return;
+	 			case 3:
+	 				random_type='S';
+	 				System.out.println("\n\n random_type: "+random_type);
+	 				return;
+	 			default:
+	 				random_type='Z';
+	 				System.out.println("Default part...");
+	 		}
+
+
+
+	 	}
+	 	void result()
+	 	{
+	 		int i;
+	 		for(i=0;i<a.length;i++)
+	 		{
+	 			if(card==a[i])
+	 			{
+	 				if((type==random_type) || (type==random_type+32))
+	 				{
+	 					System.out.println("\nYOU winner.... :) ");
+	 					return;
+	 				}
+	 			}
+	 		}
+	 		if(i==7)
+	 		{
+	 			System.out.println("\nBETTER LUCK NEXT TIME :( ");
+	 		}
+	 	}
 }
 
