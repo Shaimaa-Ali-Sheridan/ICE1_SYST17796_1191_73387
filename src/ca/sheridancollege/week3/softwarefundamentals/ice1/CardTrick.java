@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -27,5 +28,28 @@ public class CardTrick {
             c.setSuit(Card.SUITS[1+ rand.nextInt(3)]);
            magicHand[i] = c;
         }
+        
+         //insert code to ask the user for Card value and suit, create their card
+        // and search magicHand here
+        //Then report the result hereF
+        
+        boolean test = true;
+        for(int i = 0; i < magicHand.length; i++){
+        if (card.equals(magicHand[i])){
+            test = false;
         }
+        }
+        String status;
+        status = (test == false) ? "You win!" : "You lose, haha!";
+        System.out.println(status);
+        
+       
+        
+        
+        
+        
+        
+    }
+    
 }
+
