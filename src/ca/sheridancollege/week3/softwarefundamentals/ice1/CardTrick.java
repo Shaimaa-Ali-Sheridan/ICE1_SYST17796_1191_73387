@@ -39,14 +39,15 @@ public class CardTrick {
             test = false;
         }
         }
+        
+        //Output:
         String status;
         status = (test == false) ? "You win!" : "You lose, haha!";
         System.out.println(status);
         
        
         
-        
-        
+      
         
         
     }
