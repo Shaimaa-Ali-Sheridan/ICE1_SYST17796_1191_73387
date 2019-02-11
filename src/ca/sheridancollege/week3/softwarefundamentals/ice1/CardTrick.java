@@ -20,7 +20,12 @@ public class CardTrick {
         card.setValue(4);
         card.setSuit("Diamonds");
         Random rand = new Random();
-        
-    }
-    
+        for (int i=0; i<magicHand.length; i++)
+        {
+            Card c = new Card();
+            c.setValue(1 + rand.nextInt(13));
+            c.setSuit(Card.SUITS[1+ rand.nextInt(3)]);
+           magicHand[i] = c;
+        }
+        }
 }
