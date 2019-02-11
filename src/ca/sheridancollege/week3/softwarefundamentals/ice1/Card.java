@@ -1,4 +1,4 @@
-/*
+/* 991523345
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -12,7 +12,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
- * @author dancye
+ * @author Said Abdikarim 991523345
  */
 public class Card {
 
@@ -48,6 +48,10 @@ public class Card {
         this.value = value;
     }
    
+    public boolean equals(Object obj){
+    Card card = (Card) obj;
+    return this.value == card.value && this.suit == card.suit;
+    }
    
     
 }
