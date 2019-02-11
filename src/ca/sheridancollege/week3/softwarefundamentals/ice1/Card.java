@@ -40,7 +40,7 @@ public class Card {
     public int getValue() {
         return value;
     }
-
+//hiii
     /**
      * @param value the value to set
      */
