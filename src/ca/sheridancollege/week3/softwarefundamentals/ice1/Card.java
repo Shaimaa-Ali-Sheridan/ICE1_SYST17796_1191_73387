@@ -53,5 +53,5 @@ public class Card {
     return this.value == card.value && this.suit == card.suit;
     }
    
-    
+    //test comment
 }
