@@ -35,7 +35,7 @@ public class CardTrick {
         System.out.print("Please chose the Card Suit : 0 = Hearts, 1 = Diamonds, 2 = Spades , 3 = Clubs : ");
         
         int suitnumber = Input.nextInt();
-        
+        //output:
         System.out.print("Please Enter a card number here : ");
         
         int cardnumber = Input.nextInt();
