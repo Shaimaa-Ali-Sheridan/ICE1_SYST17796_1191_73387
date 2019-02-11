@@ -37,11 +37,19 @@ public class CardTrick {
             System.out.println(c.getSuit());
         }
         
+        Card lucky_card = new Card();
+        lucky_card.setValue(5);
+        lucky_card.setSuit(Card.SUITS[1]);
+        
         boolean b = false;
-        System.out.println("Pick Card: ");
+        System.out.println("Pick up up your favourite card: ");
         card = scan.nextInt();
-        System.out.println("Suit: ");
+        System.out.println("Please Select The Suit : 1 = Clubs, 2 = Spades, 3 = Heart , 4 = Diamond : ");
         suit = scan.next();
+        
+        Card c = new Card();
+          c.setValue(card);
+          c.setSuit(Card.SUITS[suit]);
         
         for (int i=0; i<magicHand.length; i++)
         {
