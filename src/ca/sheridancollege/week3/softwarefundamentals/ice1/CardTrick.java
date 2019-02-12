@@ -17,7 +17,7 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
-        boolean res = false;
+        boolean res = true;
         Card[] magicHand = new Card[7];
         Random rm = new Random();
         Scanner in = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class CardTrick {
         
         Card LuckyCard = new Card();
         LuckyCard.setValue(7);
-        LuckyCard.setSuit(Card.SUITS[1]);
+        LuckyCard.setSuit(Card.SUITS[0]);
         
         for (int i=0; i<magicHand.length; i++)
         {
@@ -40,12 +40,13 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("select card number which 1 you want to search : ");
+        System.out.println("select card number between 1 to 7 which 1 you want to search : ");
         cardnum = in.nextInt();
         
+        System.out.println("select card type : 'Hearts' 'Diamonds' 'Spades' 'Clubs' ");
         System.out.println("Select card type which 1 you want to search : ");
         cardtype = in.next();
-        
+     
         for (Card magicHand1 : magicHand) {
             res = (magicHand1.getValue() == cardnum) && (magicHand1.getSuit().equals(cardtype));
         }
@@ -57,15 +58,32 @@ public class CardTrick {
         {
             System.out.println("SORRY...BETTER LUCK NEXT TIME");
         }
-                
-      
+        
+        
         
         // and search magicHand here
-       
+        for (Card magicHand1 : magicHand) {
+            if ((magicHand1.getValue() == cardnum) && (magicHand1.getSuit().equals(cardtype))) 
+                if ((magicHand1.getValue() == 2) && ("Spades".equals(magicHand1.getSuit()))) {
+                    res = true;
+                    break;
+                } else {
+                    res = false;
+                }
+                       
+        }
         
         //Then report the result here
         
+        if(res == true)
+        {
+            System.out.println("Hurrrrr!!!! YOU WIN.....");
+        }
         
+        else
+        {
+            System.out.println("Opssss!!!! YOU lose");
+        }
     }
     
 }
