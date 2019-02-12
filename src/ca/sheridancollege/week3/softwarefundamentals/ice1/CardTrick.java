@@ -21,6 +21,7 @@ public class CardTrick {
     {
         Random rand = new Random();
         Card[] magicHand = new Card[7];
+        Card luckyCard = new Card(); // From git
          int card;
         String suit ="";
         Scanner objInput = new Scanner(System.in);
