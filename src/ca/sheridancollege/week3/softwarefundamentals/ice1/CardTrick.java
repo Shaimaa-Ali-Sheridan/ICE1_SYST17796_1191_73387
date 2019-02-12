@@ -39,8 +39,10 @@ public class CardTrick {
         boolean check = false;
          System.out.println("Pick Card: ");
         card = objInput.nextInt();
+        int CardVal = luckyCard.getValue(); 
         System.out.println("Suit: ");
         suit = objInput.next();
+        String SuitStr  = luckyCard.getSuit();
          for (int i=0; i<magicHand.length; i++)
         {
            int mv= magicHand[i].getValue();
