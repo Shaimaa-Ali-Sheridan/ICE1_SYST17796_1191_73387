@@ -25,7 +25,7 @@ public class Card {
      * @return the suit
      */
     public String getSuit() {
-        return suit;
+         return suit;
     }
 
     /**
@@ -34,6 +34,7 @@ public class Card {
     public void setSuit(String suit) {
         this.suit = suit;
     }
+       
 
     /**
      * @return the value
