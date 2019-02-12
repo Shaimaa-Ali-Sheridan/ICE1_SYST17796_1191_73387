@@ -29,6 +29,7 @@ public class CardTrick {
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             c.setSuit(Card.SUITS[(int) ((Math.random() * 3) + 1)]);
         }
+            
             Card lucky = new Card();
             lucky.setValue(3);
             lucky.setSuit(Card.SUITS[2]);
