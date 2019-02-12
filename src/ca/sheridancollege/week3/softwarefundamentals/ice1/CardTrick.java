@@ -20,8 +20,7 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         Card luckyCard = new Card();
-        luckyCard.suit = "clubs";  //Code from Git
-        luckyCard.value = 2;       //Code from Git
+       
         boolean valid = false;
         Scanner inputObj = new Scanner(System.in);
         Random num = new Random();
@@ -33,7 +32,8 @@ public class CardTrick {
             magicHand[i]=c;
            
         }
-       
+        int luckyCardVal = 3;
+        String luckyCardSuits = "Hearts";
         System.out.println("Enter number between 1 to 13 for cards: "); 
         int userNum = inputObj.nextInt();
         System.out.println("Enter Suit (Hearts, Diamonds, Spades, Clubs): ");
