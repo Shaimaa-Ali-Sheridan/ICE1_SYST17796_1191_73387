@@ -41,15 +41,16 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Enter your card value");
+       /* System.out.println("Enter your card value");
         card= usercard.nextInt();
                 
         System.out.println("Enter your suit value");
         suit = usercard.next();
-        boolean answer = false;
+        boolean answer = true;*/
         
         // and search magicHand here
-        for (Card magicHand1 : magicHand) {
+        //magic hand code
+        /*for (Card magicHand1 : magicHand) {
             if (magicHand1.getValue() == card && magicHand1.getSuit().equals(suit)) {
                 if (magicHand1.getValue() == 13 && "Daimond".equals(magicHand1.getSuit())) {
                     answer=true;
@@ -58,18 +59,27 @@ public class CardTrick {
                 else{
                     answer=false;
                 }
+            }*/
+        
+        //Lucky Card code
+     Card LuckyCard= new Card();
+        LuckyCard.setValue(7);
+        LuckyCard.setSuit("Heart");
+        boolean answer = true;
+        
+        for(int i=0;i<magicHand.length;i++){
+            if(magicHand[i].getValue()==LuckyCard.getValue() && magicHand[i].getSuit()==LuckyCard.getSuit()){
+                answer=true;
+                break;
             }
-        }
-     
-        //Then report the result here
+            }
         
-        
-        if(true==answer){
+        if(answer==true){
             System.out.println("You win!!!!");
         }
         else{
-            System.out.println("You lost!!!");
-        }
+              System.out.println("You Loose!!!");
+         }
     }
     
 }
