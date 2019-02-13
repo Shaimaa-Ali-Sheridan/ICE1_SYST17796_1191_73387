@@ -48,4 +48,13 @@ public class Card {
         this.value = value;
     }
     
+    public boolean isEquals(Object obj) {
+        Card passObj = (Card) obj;
+       
+        if((this.getSuit() == passObj.getSuit()) && (this.getValue() == passObj.getValue()))
+            return true;
+        else 
+            return false;
+   }
+    
 }

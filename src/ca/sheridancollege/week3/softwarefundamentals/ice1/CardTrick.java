@@ -35,7 +35,18 @@ public class CardTrick {
         Card luckyCard = new Card();
         luckyCard.setValue(6);
         luckyCard.setSuit("Spades");
-        
+
+        for(int i = 0; i < magicHand.length; i++)
+        { 
+            System.out.print(magicHand[i].toString());
+            
+            if(magicHand[i].isEquals(luckyCard))
+                System.out.println(", equal to card with value 6 and suit diamonds? " + ", the cards are equal!");
+            
+            else 
+                System.out.println(", equal to card with value 6 and suit diamonds? " + ", the cards are not equal!");
+        }
+
     }
     
 }
