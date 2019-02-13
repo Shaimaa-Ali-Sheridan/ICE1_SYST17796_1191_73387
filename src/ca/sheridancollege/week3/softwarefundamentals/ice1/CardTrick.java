@@ -35,7 +35,7 @@ public class CardTrick {
         Card luckyCard = new Card();
         luckyCard.setValue(6);
         luckyCard.setSuit("Spades");
-       
+        
     }
     
 }
