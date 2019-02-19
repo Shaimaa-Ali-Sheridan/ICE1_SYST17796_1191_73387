@@ -13,7 +13,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * student number: 991536277
  */
 public class CardTrick {
-    //master branch
+    //mb
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
