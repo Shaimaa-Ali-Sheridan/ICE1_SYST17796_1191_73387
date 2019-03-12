@@ -13,14 +13,12 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
- * @version  1.0
- * @modifier name: Virajkumar Padhiyar Student id - 991510800
- * Date - 11th Feb,2019
+ * @modifier name: Virajkumar Padhiyar  
  */
 public class Card {
-
-   private String suit; //clubs, spades, diamonds, hearts
-   private int value;//1-13
+     //String suit is for clubs, spades,diamonds and hearts
+   private String suit; 
+   private int value;
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
     /**
@@ -31,7 +29,7 @@ public class Card {
     }
 
     /**
-     * @param suit the suit to set
+     * @param suit 
      */
     public void setSuit(String suit) {
         this.suit = suit;
@@ -50,7 +48,7 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-   
-   
+
     
+   
 }
